@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 A1B2C3D4
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -263,11 +263,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop PIVX server.");
+            "\nStop CHUNICOIN server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "PIVX server stopping";
+    return "CHUNICOIN server stopping";
 }
 
 
@@ -351,36 +351,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* PIVX features */
-        {"pivx", "masternode", &masternode, true, true, false},
-        {"pivx", "listmasternodes", &listmasternodes, true, true, false},
-        {"pivx", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"pivx", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"pivx", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"pivx", "masternodedebug", &masternodedebug, true, true, false},
-        {"pivx", "startmasternode", &startmasternode, true, true, false},
-        {"pivx", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"pivx", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"pivx", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"pivx", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"pivx", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"pivx", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"pivx", "mnbudget", &mnbudget, true, true, false},
-        {"pivx", "preparebudget", &preparebudget, true, true, false},
-        {"pivx", "submitbudget", &submitbudget, true, true, false},
-        {"pivx", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"pivx", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"pivx", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"pivx", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"pivx", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"pivx", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"pivx", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"pivx", "checkbudgets", &checkbudgets, true, true, false},
-        {"pivx", "mnsync", &mnsync, true, true, false},
-        {"pivx", "spork", &spork, true, true, false},
-        {"pivx", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* CHUNICOIN features */
+        {"chunicoin", "masternode", &masternode, true, true, false},
+        {"chunicoin", "listmasternodes", &listmasternodes, true, true, false},
+        {"chunicoin", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"chunicoin", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"chunicoin", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"chunicoin", "masternodedebug", &masternodedebug, true, true, false},
+        {"chunicoin", "startmasternode", &startmasternode, true, true, false},
+        {"chunicoin", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"chunicoin", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"chunicoin", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"chunicoin", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"chunicoin", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"chunicoin", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"chunicoin", "mnbudget", &mnbudget, true, true, false},
+        {"chunicoin", "preparebudget", &preparebudget, true, true, false},
+        {"chunicoin", "submitbudget", &submitbudget, true, true, false},
+        {"chunicoin", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"chunicoin", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"chunicoin", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"chunicoin", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"chunicoin", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"chunicoin", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"chunicoin", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"chunicoin", "checkbudgets", &checkbudgets, true, true, false},
+        {"chunicoin", "mnsync", &mnsync, true, true, false},
+        {"chunicoin", "spork", &spork, true, true, false},
+        {"chunicoin", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"pivx", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"chunicoin", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -607,14 +607,14 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> pivx-cli " + methodname + " " + args + "\n";
+    return "> chunicoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:51473/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:44440/\n";
 }
 
 void RPCRegisterTimerInterface(RPCTimerInterface *iface)

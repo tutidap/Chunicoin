@@ -251,7 +251,7 @@ BOOST_AUTO_TEST_CASE(checkzerocoinspend_test)
         cout << state.GetRejectCode() << endl;
         BOOST_CHECK_MESSAGE(false, strError);
     }
-    
+
     /**check an overspend*/
     CTxOut txOutOverSpend(100 * COIN, script);
     CTransaction txOverSpend;

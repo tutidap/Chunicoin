@@ -3,10 +3,10 @@
  *
  * @brief      Denomination functions for the Zerocoin library.
  *
- * @copyright  Copyright 2017 PIVX Developers
+ * @copyright  Copyright 2017 CHUNICOIN Developers
  * @license    This project is released under the MIT license.
  **/
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 A1B2C3D4
 
 #include "denomination_functions.h"
 

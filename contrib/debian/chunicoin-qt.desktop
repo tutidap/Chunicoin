@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CHUNICOIN
+Comment=CHUNICOIN P2P Cryptocurrency
+Comment[fr]=CHUNICOIN, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=CHUNICOIN, eşten eşe kriptografik sanal para birimi
+Exec=chunicoin-qt %u
+Terminal=false
+Type=Application
+Icon=chunicoin128
+MimeType=x-scheme-handler/chunicoin;
+Categories=Office;Finance;

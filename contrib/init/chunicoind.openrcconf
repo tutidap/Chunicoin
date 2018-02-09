@@ -1,0 +1,26 @@
+# /etc/conf.d/chunicoind: config file for /etc/init.d/chunicoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/chunicoin/chunicoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/chunicoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/chunicoind.pid"
+
+# Where to write chunicoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/chunicoind"
+
+# User and group to own chunicoind process
+#BITCOIND_USER="chunicoin"
+#BITCOIND_GROUP="chunicoin"
+
+# Path to chunicoind executable
+#BITCOIND_BIN="/usr/bin/chunicoind"
+
+# Nice value to run chunicoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
